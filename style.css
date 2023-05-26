@@ -1,0 +1,79 @@
+body {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    min-height: auto;
+    background-image: url(d2.jpg);
+    background-size: cover;
+    color: #F4B183;
+}
+
+h1{
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 800;
+    line-height: 25px;
+    text-align: center;
+}
+
+p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center; 
+}
+
+.box{
+    font-family: 'Nunito', sans-serif;
+    width: 800px;
+    margin: 25px auto;
+    color: #4C2C2E;
+    background-color: #E7F2F8;
+    padding: 30px 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.4s;
+    box-sizing: border-box;
+}
+.box .container{
+    position: relative;
+    margin: 10px 10px;
+}
+.box .animals{
+    position: relative;
+    padding: 10px 0;
+    font-size: 26px;
+    color: #4C2C2E;
+    cursor: pointer;
+}
+.box .animals::before{
+    content: '+';
+    color: #4C2C2E;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 26px;
+    transform: translateY(-50%);
+}
+.box .species{
+    position: relative;
+    background: #E7F2F8;
+    height: 0;
+    font-size: 21px;
+    text-align: center;
+    width: 700px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.box .container.active .species{
+    height: 150px;
+}
+.box .container.active .animals::before{
+    content: '-';
+    font-size: 30px;
+}
